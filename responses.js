@@ -274,7 +274,31 @@ const ClientErrorResponses = [
         status: "407 | Proxy Authentication Required",
         deprecated: false,
         experimental: false
-    }
+    },
+	{
+		state: "Request Timeout",
+		message: "This response is sent on an idle connection by some servers, even without any previous request by the client. It means that the server would like to shut down this unused connection. This response is used much more since some browsers, like Chrome, Firefox 27+, or IE9, use HTTP pre-connection mechanisms to speed up surfing. Also note that some servers merely shut down the connection without sending this message.",
+		code: 408,
+		status: "408 | Request Timeout",
+		deprecated: false,
+        experimental: false
+	},
+	{
+		state: "Conflict",
+		message: "This response is sent when a request conflicts with the current state of the server.",
+		code: 409,
+		status: "409 | Conflict",
+		deprecated: false,
+        experimental: false
+	},
+	{
+		state: "Gone",
+		message: "This response is sent when the requested content has been permanently deleted from server, with no forwarding address. Clients are expected to remove their caches and links to the resource. The HTTP specification intends this status code to be used for \"limited-time, promotional services\". APIs should not feel compelled to indicate resources that have been deleted with this status code.",
+		code: 410,
+		status: "410 | Gone",
+		deprecated: false,
+        experimental: false
+	}
 ];
 
 /** @type {IResponse[]} Server Error Responses */
@@ -300,5 +324,7 @@ module.exports = {
         state: "",
         message: "",
         code: 0,
-        status: ""
+        status: "",
+        deprecated: false,
+        experimental: false
 */
