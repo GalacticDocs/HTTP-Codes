@@ -1,34 +1,14 @@
-type IResponse = {
-    /** The response state that is connected to this response code. */
-    state: string;
-    /** The response message that is connected to this response code. */
-    message: string;
-    /** The response code. */
-    code: number;
-    /** The status of the response. */
-    status: string;
-    /** If said HTTP response code is deprecated. */
-    deprecated: boolean;
-}
+// =|=|= ARRAYS =|=|=
+import InformationalArray from "./arrays/informational_res";
+import SuccessfulArray from "./arrays/successful_res";
+import RedirectionMessagesArray from "./arrays/redirection_res";
+import ClientErrorArray from "./arrays/client_error_res";
+import ServerErrorArray from "./arrays/server_error_res";
 
-const InformationalResponses: IResponse[];
-const SuccessfulResponses: IResponse[];
-const RedirectionMessages: IResponse[];
-const ClientErrorResponses: IResponse[];
-const ServerErrorResponses: IResponse[];
+// =|=|= OBJECTS =|=|=
+import InformationalObject from "./objects/informational_res";
+import SuccessfulObject from "./objects/successful_res";
+import RedirectionMessagesObject from "./objects/redirection_res";
+import ClientErrorObject from "./objects/client_error_res";
+import ServerErrorObject from "./objects/server_error_res";
 
-export = {
-    /** Responses */
-    Responses: {
-        /** Informational Responses */
-        Informational: InformationalResponses,
-        /** Successful Responses */
-        Successful: SuccessfulResponses,
-        /** Redirection Messages */
-        Redirection: RedirectionMessages,
-        /** Client Error Responses */
-        ClientError: ClientErrorResponses,
-        /** Server Error Responses */
-        ServerError: ServerErrorResponses
-    }
-};
