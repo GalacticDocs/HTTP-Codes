@@ -33,10 +33,10 @@ module.exports = {
 };
 
 /*
-        state: "",
-        message: "",
-        code: 0,
-        status: "",
-        deprecated: false,
-        experimental: false
+        state: string,
+        message: string,
+        code: number,
+        status: string,
+        deprecated: boolean,
+        experimental: boolean
 */
